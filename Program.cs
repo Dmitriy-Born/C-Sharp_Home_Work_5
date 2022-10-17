@@ -46,6 +46,49 @@ for(int i = 1; i < array2.Length; i = i + 2){
 Console.WriteLine("Сумма элементов, стоящих на нечетных позициях = " + odd);
         break;
 
+    case 3:
+//Задание №3
+//Задайте массив вещественных чисел(просто от минус бесконечности, до плюс бесконечности, с дробными не работаем). 
+//Найдите разницу между максимальным и минимальным элементов массива.
+//[3 7 22 2 78] -> 76
+Console.WriteLine("----------Задание №3----------");
+int Num3 = Message1();
+int minValue3 = Message2();
+int maxValue3 = Message3();
+int[] array3 = GetArray(Num3, minValue3, maxValue3);
+Console.WriteLine($"{String.Join(", ", array3)}");
+
+int max = array3[0];
+int min = array3[0];
+
+for(int i = 1; i < array3.Length; i++){
+    if(array3[i] > max){
+        max = array3[i];
+        i++;
+    }
+    else{
+        i++;
+    }
+    if(array3[i] < min){
+        min = array3[i];
+        i++;
+    }
+    else{
+        i++;
+}
+}
+Console.WriteLine($"Максимальный элемент массива равен {max}");
+Console.WriteLine($"Минимальный элемент массива равен {min}");
+Console.WriteLine($"Сумма минимального и максимального элемента массива равна {min + max}");
+        break;
+        
+    default:
+    Console.WriteLine("Нет такого задания");
+        break;
+}
+
+
+
 //Методы задания начальных значений
 int Message1(){
 Console.WriteLine("Введите кол-во элементов массива: ");
