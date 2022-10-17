@@ -25,6 +25,26 @@ while(S < Num1){
 Console.WriteLine($"Количество четных элементов в массиве = {count}");
         break;
 
+case 2:
+// //Задание №2
+//  //Задайте одномерный массив, заполненный случайными числами. 
+//  //Найдите сумму элементов, стоящих на нечётных позициях.
+// //[3, 7, 23, 12] -> 19
+// //[-4, -6, 89, 6] -> 0
+Console.WriteLine("----------Задание №2----------");
+int Num2 = Message1();
+int minValue2 = Message2();
+int maxValue2 = Message3();
+int[] array2 = GetArray(Num2, minValue2, maxValue2);
+Console.WriteLine($"{String.Join(", ", array2)}");
+
+int odd = 0;
+
+for(int i = 1; i < array2.Length; i = i + 2){
+    odd += array2[i];
+}
+Console.WriteLine("Сумма элементов, стоящих на нечетных позициях = " + odd);
+        break;
 
 //Методы задания начальных значений
 int Message1(){
